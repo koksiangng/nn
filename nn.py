@@ -26,13 +26,15 @@ class NN:
             error += (a - e) ** 2
         return error / len(actual)
         
-    #Matrix mult
+    #Matrix mult between input and hidden layer = output
     def calculate(self, inp_values):
         output = 0
         for index, inp_neuron in enumerate(inp_values):
             output += inp_neuron * self.hidden_layer[0][index]
         return output
     
+    #Currently, values = 4 square values
+    #Gets result from multiple "calculate"s.
     def train(self, all_values):
         outputs = []
         for values in all_values:

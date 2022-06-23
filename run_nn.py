@@ -4,6 +4,7 @@ import numpy as np
 
 #inspired from:
 #https://sirupsen.com/napkin/neural-net
+#https://peterroelants.github.io/posts/neural-network-implementation-part01/
 
 #MSE: SUM(obs(i) - pred(i))^2 / obs
 
@@ -23,10 +24,10 @@ def run_nn():
         print("Unknown exception")
     
     data, exp = create_data()
-    print(data[0:10])
-    print(exp[0:10])
+    #print(data[0:10])
+    #print(exp[0:10])
     trained = nn.train(data)
-    print(trained[0:10])
+    #print(trained[0:10])
     print(nn.MSE(trained, exp))
 
 
